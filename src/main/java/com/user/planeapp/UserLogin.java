@@ -9,6 +9,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 public class UserLogin extends Application {
+
+    public static final String CURRENCY="$";
     @Override
             public void start(Stage primaryStage) throws Exception{
              Parent root = FXMLLoader.load(getClass().getResource("Interface.fxml"));

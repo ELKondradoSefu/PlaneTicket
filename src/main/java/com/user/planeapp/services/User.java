@@ -103,7 +103,8 @@ public class User {
         JSONParser parser = new JSONParser();
         Object p;
         JSONArray arrayClient = new JSONArray();
-        try {
+        try
+        {
             FileReader readFile = new FileReader("src/main/resources/usersClient.json");
             BufferedReader read = new BufferedReader(readFile);
             p = parser.parse(read);
@@ -118,7 +119,6 @@ public class User {
 
         Iterator<JSONObject> iterator = arrayClient.iterator();
 
-
         while (iterator.hasNext())
         {
             JSONObject obj = iterator.next();
@@ -128,11 +128,8 @@ public class User {
                 name=(String)obj.get("First Name:")+" "+(String)obj.get("Last Name:");
                 return "Client";
             }
-
         }
-
-        return"";
-
+        return "";
     }
 
     //if there is no user in the files throws incorrect mail or pass

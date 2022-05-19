@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -15,6 +17,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class HomeScreenClientController implements Initializable {
@@ -48,18 +51,20 @@ public class HomeScreenClientController implements Initializable {
     }
 
     public void shopButtonOnAction(ActionEvent event) throws IOException{
-
-        getPage("FlightsScreenClient");
-
+    try {
+        Parent rootShop = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
+        Stage viewFlightsStage = new Stage();
+        viewFlightsStage.setTitle("Flights Market");
+        viewFlightsStage.setScene(new Scene(rootShop, 1350, 750));
+        viewFlightsStage.show();
+    }catch(NullPointerException ignored)
+    {}
     }
-
 
     public void historyButtonOnAction(ActionEvent event) throws IOException{
         getPage("ReviewScreenClient");
 
     }
-
-
 
     public void getPage(String filename) throws IOException {
         Node node;
@@ -67,8 +72,6 @@ public class HomeScreenClientController implements Initializable {
         home.getChildren().setAll(node);
 
     }
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
