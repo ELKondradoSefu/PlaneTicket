@@ -42,42 +42,42 @@
          <children>
             <TextField fx:id="lastnameTextfield" layoutX="170.0" layoutY="193.0" prefHeight="24.0" prefWidth="193.0" promptText="Lastname" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
                <font>
-                  <Font name="Serif Regular" size="12.0" />
+                  <Font name="Times New Roman" size="18.0" />
                </font>
             </TextField>
             <Label layoutX="78.0" layoutY="139.0" text="First name">
                <font>
-                  <Font name="Serif Regular" size="14.0" />
+                  <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
             <TextField fx:id="firstnameTextfield" layoutX="170.0" layoutY="135.0" prefHeight="24.0" prefWidth="193.0" promptText="Firstname" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #00BFFF;">
                <font>
-                  <Font name="Serif Regular" size="12.0" />
+                  <Font name="Times New Roman" size="18.0" />
                </font>
             </TextField>
             <TextField fx:id="emailTextfield" layoutX="170.0" layoutY="253.0" prefHeight="24.0" prefWidth="193.0" promptText="Email" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
                <font>
-                  <Font name="Serif Regular" size="12.0" />
+                  <Font name="Times New Roman" size="18.0" />
                </font>
             </TextField>
             <Label layoutX="76.0" layoutY="197.0" text="Last name">
                <font>
-                  <Font name="Serif Regular" size="14.0" />
+                  <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
             <Label layoutX="100.0" layoutY="257.0" text="Email">
                <font>
-                  <Font name="Serif Regular" size="14.0" />
+                  <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
             <Label layoutX="78.0" layoutY="320.0" text="Password">
                <font>
-                  <Font name="Serif Regular" size="14.0" />
+                  <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <Button id="bevel-grey" fx:id="registerButton" layoutX="118.0" layoutY="373.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="40.0" prefWidth="211.0" text="Sign up" textFill="DEEPSKYBLUE">
+            <Button id="rich-blue" fx:id="registerButton" layoutX="118.0" layoutY="373.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="40.0" prefWidth="211.0" stylesheets="@cssfiles/button.css" text="Sign up" textFill="DEEPSKYBLUE">
                <font>
-                  <Font name="Serif Regular" size="21.0" />
+                  <Font name="Times New Roman" size="17.0" />
                </font>
             </Button>
             <Button fx:id="closeButton" layoutX="383.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="21.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="x">
@@ -87,10 +87,13 @@
             </Button>
             <Label fx:id="registrationMessageLabel" alignment="CENTER" layoutX="71.0" layoutY="93.0" prefHeight="21.0" prefWidth="306.0" textFill="#e16f62">
                <font>
-                  <Font name="Serif Regular" size="18.0" />
+                  <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <PasswordField fx:id="setPasswordField" layoutX="170.0" layoutY="314.0" prefHeight="24.0" prefWidth="193.0" promptText="Password" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="setPasswordField" layoutX="170.0" layoutY="314.0" prefHeight="24.0" prefWidth="193.0" promptText="Password" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
+               <font>
+                  <Font name="Times New Roman" size="18.0" />
+               </font></PasswordField>
             <Label layoutX="118.0" layoutY="43.0" text="Create account">
                <font>
                   <Font name="Serif Bold" size="29.0" />
@@ -98,12 +101,12 @@
             </Label>
             <Label layoutX="108.0" layoutY="428.0" text="Already have an account?">
                <font>
-                  <Font name="Serif Regular" size="15.0" />
+                  <Font name="Times New Roman" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="returnSignin" layoutX="264.0" layoutY="423.0" mnemonicParsing="false" onAction="#returnSigninOnAction" prefHeight="28.0" prefWidth="66.0" style="-fx-background-color: transparent;" styleClass="signupButton" text="Sign in" textFill="DEEPSKYBLUE">
+            <Button fx:id="returnSignin" layoutX="264.0" layoutY="423.0" mnemonicParsing="false" onAction="#returnSigninOnAction" prefHeight="28.0" prefWidth="66.0" style="-fx-background-color: transparent;" styleClass="signupButton" text="Sign in" underline="true">
                <font>
-                  <Font name="Serif Regular" size="15.0" />
+                  <Font name="Times New Roman Bold" size="15.0" />
                </font>
             </Button>
          </children>
