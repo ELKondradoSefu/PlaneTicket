@@ -44,7 +44,7 @@ public class HomeScreenClientController implements Initializable {
 
     public void homeScreenButtonOnAction(ActionEvent event) throws IOException {
 
-        getPage("HomeScreenClient");
+        getPage("Interface");
     }
 
     public void shopButtonOnAction(ActionEvent event) throws IOException{
