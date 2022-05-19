@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.ShopScreenClientController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.ShopScreenClientController">
    <children>
       <Label layoutX="145.0" layoutY="161.0" text="FLIGHTS">
          <font>
             <Font size="40.0" />
          </font>
       </Label>
-      <Button fx:id="closeButton" layoutX="500.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeButtonOnAction" text="x">
+      <Button fx:id="closeButton" layoutX="743.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
          <font>
             <Font size="34.0" />
          </font>
