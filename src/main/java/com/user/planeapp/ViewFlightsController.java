@@ -52,7 +52,7 @@ public class ViewFlightsController implements Initializable {
         Flight flight;
 
         flight = new Flight();
-        flight.setName("Istambul");
+        flight.setName("Istanbul");
         flight.setPrice(45);
         flight.setImgSrc("/com/user/planeapp/images/istambul.jpg");
         flight.setColor("6A7324");
@@ -109,14 +109,14 @@ public class ViewFlightsController implements Initializable {
         flights.add(flight);
 
         flight = new Flight();
-        flight.setName("Viena");
+        flight.setName("Vienna");
         flight.setPrice(15);
         flight.setImgSrc("/com/user/planeapp/images/viena.jpg");
         flight.setColor("F08080");
         flights.add(flight);
 
         flight = new Flight();
-        flight.setName("Buenos Aiers");
+        flight.setName("Buenos Aires");
         flight.setPrice(70);
         flight.setImgSrc("/com/user/planeapp/images/buenosaires.jpg");
         flight.setColor("9370DB");
