@@ -15,7 +15,7 @@
             <Font name="Comic Sans MS Bold Italic" size="30.0" />
          </font>
       </Label>
-      <Button fx:id="closeButton" layoutX="782.0" layoutY="11.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
+      <Button fx:id="closeButton" layoutX="690.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
