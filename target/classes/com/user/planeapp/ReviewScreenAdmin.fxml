@@ -21,15 +21,15 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <ListView fx:id="salesView" layoutX="420.0" layoutY="67.0" prefHeight="414.0" prefWidth="394.0" />
-      <Label fx:id="mySales" alignment="CENTER" layoutX="564.0" layoutY="34.0" text="View Sales">
+      <ListView fx:id="salesView" layoutX="637.0" layoutY="104.0" prefHeight="522.0" prefWidth="638.0" />
+      <Label fx:id="mySales" alignment="CENTER" layoutX="903.0" layoutY="67.0" text="View Sales">
          <font>
             <Font size="23.0" />
          </font>
       </Label>
-      <BarChart fx:id="Chart" layoutX="4.0" layoutY="60.0" prefHeight="414.0" prefWidth="394.0" title="View Sales">
+      <BarChart fx:id="Chart" layoutX="4.0" layoutY="67.0" prefHeight="559.0" prefWidth="619.0" title="View Sales">
         <xAxis>
-          <CategoryAxis fx:id="nameOfFlights" label="Destinations" side="BOTTOM" />
+          <CategoryAxis fx:id="nameOfFlights" label="Destinations" prefHeight="42.0" prefWidth="332.0" side="BOTTOM" />
         </xAxis>
         <yAxis>
           <NumberAxis fx:id="numberOfFlights" label="Visits" side="LEFT" upperBound="40.0" />

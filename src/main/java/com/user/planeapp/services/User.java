@@ -24,7 +24,7 @@ public class User {
     //adds clients in json file:usersClients
     public static void addUserClient(String firstName, String lastName, String email, String password) throws EmptyFieldException, UsernameNotAvailable {
 
-       checkIfFieldsAreEmptyClient(firstName,lastName,email,password);
+        checkIfFieldsAreEmptyClient(firstName,lastName,email,password);
         name=firstName+" "+lastName;
         JSONObject obj = new JSONObject();
         JSONArray arrayClient = new JSONArray();
@@ -68,8 +68,6 @@ public class User {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     //check for empty fields
@@ -139,7 +137,5 @@ public class User {
             throw new IncorrectMailOrPassword();
         }
     }
-
-
 }
 

@@ -11,6 +11,7 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -61,104 +62,77 @@ public class ViewFlightsController implements Initializable {
     @FXML
     private TextField myCart;
 
+    @FXML
+    private TextField searchBoxFlight;
+
+    @FXML
+    private Label errorOnSearch;
+
     private List<Flight> flights = new ArrayList<Flight>();
     private Image image;
     private MyListener myListener;
     private double myTicketsSum=0;
 
-    private List<Flight> getData()
+    public Flight addFlight(String name,double price,String imdSrc,String color,int flightDuration,String date)
+    {
+        Flight flight = new Flight();
+        flight.setName(name);
+        flight.setPrice(price);
+        flight.setImgSrc("/com/user/planeapp/images/" + imdSrc);
+        flight.setColor(color);
+        flight.setFlightDuration(flightDuration);
+        flight.setDate(date);
+        return flight;
+    }
+
+    public List<Flight> getData()
     {
         List<Flight> flights = new ArrayList<>();
         Flight flight;
 
-        flight = new Flight();
-        flight.setName("Istambul");
-        flight.setPrice(45.4);
-        flight.setImgSrc("/com/user/planeapp/images/istambul.jpg");
-        flight.setColor("6A7324");
-        flight.setFlightDuration(128);
-        flight.setDate("11/05/2022");
+        flight = addFlight("Istambul",45.4,"istambul.jpg","6A7324",128,"11/05/2022");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("Rome");
-        flight.setPrice(53);
-        flight.setImgSrc("/com/user/planeapp/images/rome.jpg");
-        flight.setColor("8A2BE2");
-        flight.setFlightDuration(110);
-        flight.setDate("5/05/2022");
+        flight = addFlight("Rome",53,"rome.jpg","8A2BE2",110,"5/05/2022");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("London");
-        flight.setPrice(22.35);
-        flight.setImgSrc("/com/user/planeapp/images/london.jpg");
-        flight.setColor("CD853F");
-        flight.setFlightDuration(127);
-        flight.setDate("30/11/2022");
+        flight = addFlight("London",22.35,"london.jpg","CD853F",127,"30/11/2022");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("New York");
-        flight.setPrice(99.99);
-        flight.setImgSrc("/com/user/planeapp/images/newyork.jpg");
-        flight.setColor("DC143C");
-        flight.setFlightDuration(155);
-        flight.setDate("4/2/2023");
+        flight = addFlight("New York",99.99,"newyork.jpg","DC143C",155,"4/2/2023");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("Ottawa");
-        flight.setPrice(143.99);
-        flight.setImgSrc("/com/user/planeapp/images/ottawa.jpg");
-        flight.setColor("8B008B");
-        flight.setFlightDuration(330);
-        flight.setDate("3/10/2022");
+        flight = addFlight("Ottawa",143.99,"ottawa.jpg","8B008B",330,"3/10/2022");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("Kiev");
-        flight.setPrice(10);
-        flight.setImgSrc("/com/user/planeapp/images/kiev.jpg");
-        flight.setColor("8FBC8F");
-        flight.setFlightDuration(60);
-        flight.setDate("14/11/2022");
+        flight = addFlight("Kiev",10,"kiev.jpg","8FBC8F",60,"14/11/2022");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("Tokyo");
-        flight.setPrice(49.99);
-        flight.setImgSrc("/com/user/planeapp/images/tokyo.jpg");
-        flight.setColor("228B22");
-        flight.setFlightDuration(160);
-        flight.setDate("28/7/2022");
+        flight = addFlight("Tokyo",49.99,"tokyo.jpg","228B22",160,"28/7/2022");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("Beijing");
-        flight.setPrice(33);
-        flight.setImgSrc("/com/user/planeapp/images/beijing.jpg");
-        flight.setColor("FF69B4");
-        flight.setFlightDuration(125);
-        flight.setDate("22/9/2022");
+        flight = addFlight("Beijing",33,"beijing.jpg","FF69B4",125,"22/9/2022");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("Viena");
-        flight.setPrice(15.99);
-        flight.setImgSrc("/com/user/planeapp/images/viena.jpg");
-        flight.setColor("F08080");
-        flight.setFlightDuration(55);
-        flight.setDate("10/10/2022");
+        flight = addFlight("Vienna",15.99,"viena.jpg","F08080",55,"10/10/2022");
         flights.add(flight);
 
-        flight = new Flight();
-        flight.setName("Buenos Aiers");
-        flight.setPrice(72.5);
-        flight.setImgSrc("/com/user/planeapp/images/buenosaires.jpg");
-        flight.setColor("9370DB");
-        flight.setFlightDuration(280);
-        flight.setDate("16/12/2022");
+        flight = addFlight("Buenos Aiers",72.5,"buenosaires.jpg","9370DB",280,"16/12/2022");
+        flights.add(flight);
+
+        flight = addFlight("Paris",95,"paris.jpg","FFE4C4",133,"10/11/2023");
+        flights.add(flight);
+
+        flight = addFlight("Seoul",269.99,"seoul.jpg","ff1e90",250,"01/05/2022");
+        flights.add(flight);
+
+        flight = addFlight("Budapest",45,"budapesta.jpg","2F4F4F",22,"29/11/2022");
+        flights.add(flight);
+
+        flight = addFlight("Lima",199.99,"Lima.jpg","A52A2A",225,"10/11/2023");
+        flights.add(flight);
+
+        flight = addFlight("Bucharest",19.99,"bucuresti.jpg","008080",35,"30/01/2023");
         flights.add(flight);
 
         return flights;
@@ -178,14 +152,31 @@ public class ViewFlightsController implements Initializable {
         Platform.exit();
     }
 
+    public void searchForFlight(ActionEvent actionEvent)
+    {
+        errorOnSearch.setText("");
+        String searchBox = searchBoxFlight.getText();
+        for(int i=0;i<flights.size();i++)
+            if(searchBox.equals(flights.get(i).getName())) {
+                setChosenFlight(flights.get(i));
+                return;
+            }
+        errorOnSearch.setText("We dont have that flight");
+    }
+
     public void buyButton(ActionEvent actionEvent)
     {
         String aux = flightPriceLabel.getText();
         aux = aux.substring(1);
         myTicketsSum += (comboBox.getSelectionModel().getSelectedIndex()+1) * Double.parseDouble(aux);
         myCart.setText(UserLogin.CURRENCY + String.valueOf(myTicketsSum));
-    }
 
+        for(int i=0;i<flights.size();i++)
+            if(flights.get(i).getName().equals(flightNameLabel.getText())) {
+                flights.get(i).setTicketSum((comboBox.getSelectionModel().getSelectedIndex()+1) * Double.parseDouble(aux));
+                return;
+            }
+    }
 
     public void setChosenFlight(Flight flight)
     {
@@ -193,6 +184,7 @@ public class ViewFlightsController implements Initializable {
         flightPriceLabel.setText(UserLogin.CURRENCY + flight.getPrice());
         flightDateLabel.setText(flight.getDate());
         flightDurationLabel.setText(String.valueOf(flight.getFlightDuration()));
+        comboBox.getSelectionModel().clearSelection();
         image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(flight.getImgSrc())));
         flightImg.setImage(image);
         chosenFlight.setStyle("-fx-background-color: #" + flight.getColor() + ";\n" + "-fx-background-radius: 30");

@@ -46,9 +46,9 @@ public class HomeScreenAdminController implements Initializable {
     }
 
     public void addFlight(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Interface.fxml")));
         Stage addFlightStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        addFlightStage.setTitle("Flights Market");
+        addFlightStage.setTitle("Add new flight");
         addFlightStage.setScene(new Scene(root,1350,750));
         addFlightStage.show();
     }
@@ -59,7 +59,14 @@ public class HomeScreenAdminController implements Initializable {
         reviewSalesStage.setTitle("Interface");
         reviewSalesStage.setScene(new Scene(root,1350,750));
         reviewSalesStage.show();
+    }
 
+    public void viewFlights(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
+        Stage viewFlightsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        viewFlightsStage.setTitle("Flights Market");
+        viewFlightsStage.setScene(new Scene(root, 1350, 750));
+        viewFlightsStage.show();
     }
 
     @Override
