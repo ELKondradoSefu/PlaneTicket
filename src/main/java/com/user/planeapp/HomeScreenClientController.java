@@ -43,8 +43,6 @@ public class HomeScreenClientController implements Initializable {
         Platform.exit();
     }
 
-
-
     public void homeScreenButtonOnAction(ActionEvent event) throws IOException {
 
         getPage("Interface");

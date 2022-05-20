@@ -19,7 +19,6 @@ public class UserLogin extends Application {
              //primaryStage.setTitle("Application");
              primaryStage.setScene(new Scene(root, 818, 484));
              primaryStage.show();
-
     }
 
     public static void main(String[] args) {

@@ -20,7 +20,11 @@ public class ItemController {
     private ImageView img;
 
     @FXML
-    private Button addButton;
+    private Label duration;
+
+    @FXML
+    private Label date;
+
     private Flight flight;
     private MyListener myListener;
 
@@ -31,16 +35,16 @@ public class ItemController {
 
     public void setData(Flight flight,MyListener myListener)
     {
-        try {
             this.flight = flight;
             this.myListener=myListener;
+
             nameLabel.setText(flight.getName());
             priceLabel.setText(UserLogin.CURRENCY + flight.getPrice());
+            duration.setText(String.valueOf(flight.getFlightDuration()));
+            date.setText(flight.getDate());
             Image image;
             image = new Image(getClass().getResourceAsStream(flight.getImgSrc()));
             img.setImage(image);
-        }catch(NullPointerException ignored) {
-        }
     }
 }
 

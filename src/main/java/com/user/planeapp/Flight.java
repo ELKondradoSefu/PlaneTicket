@@ -5,6 +5,24 @@ public class Flight {
     private String imgSrc;
     private double price;
     private String color;
+    private int flightDuration;
+    private String date;
+
+    public double getFlightDuration() {
+        return flightDuration;
+    }
+
+    public void setFlightDuration(int flightDuration) {
+        this.flightDuration = flightDuration;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 
     public String getName() {
         return name;
