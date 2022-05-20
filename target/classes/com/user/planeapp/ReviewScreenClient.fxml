@@ -5,21 +5,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="reviewHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.ReviewScreenClientController">
+<AnchorPane fx:id="reviewHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.ReviewScreenClientController">
    <children>
       <Label layoutX="26.0" layoutY="40.0" prefHeight="114.0" prefWidth="523.0" text="REVIEW/CANCEL">
          <font>
             <Font size="68.0" />
          </font>
       </Label>
-      <Button fx:id="closeButton" layoutX="730.0" layoutY="17.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="78.0" prefWidth="74.0" style="-fx-background-color: transparent;" text="x">
+      <Button fx:id="closeButton" layoutX="1283.0" layoutY="-14.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="69.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="x">
          <font>
-            <Font size="38.0" />
+            <Font size="29.0" />
          </font>
       </Button>
       <Button id="admin" fx:id="homePageButton" layoutX="24.0" layoutY="447.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
          <font>
             <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButton" layoutX="1126.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="39.0" prefWidth="83.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
+         <font>
+            <Font name="Cambria" size="17.0" />
          </font>
       </Button>
    </children>

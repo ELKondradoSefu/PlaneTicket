@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="homeAdmin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.HomeScreenAdminController">
+<AnchorPane fx:id="homeAdmin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.HomeScreenAdminController">
    <children>
-      <ImageView fitHeight="484.0" fitWidth="818.0">
+      <ImageView fitHeight="750.0" fitWidth="1350.0">
          <image>
             <Image url="@images/admin_back2.jpg" />
          </image>
@@ -19,7 +19,7 @@
             <Font name="Times New Roman Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Button id="admin" fx:id="homePageButton" layoutX="14.0" layoutY="437.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
+      <Button id="admin" fx:id="homePageButton" layoutX="21.0" layoutY="440.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
          <font>
             <Font name="Times New Roman" size="18.0" />
          </font>
@@ -34,7 +34,7 @@
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="closeButton" layoutX="779.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
+      <Button fx:id="closeButton" layoutX="1311.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>

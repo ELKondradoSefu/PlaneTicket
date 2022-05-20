@@ -20,8 +20,6 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class HomeScreenAdminController implements Initializable {
-
-
     @FXML
     private Button closeButton;
     @FXML
@@ -33,47 +31,38 @@ public class HomeScreenAdminController implements Initializable {
     @FXML
     private Button adminReview;
 
-
-
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
         Platform.exit();
     }
 
-
-
     public void homeScreenButtonOnAction(ActionEvent event) throws IOException {
-
-        getPage("Interface");
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Interface.fxml")));
+        Stage homeStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        homeStage.setTitle("Interface");
+        homeStage.setScene(new Scene(root,1350,750));
+        homeStage.show();
     }
 
     public void addFlight(ActionEvent event) throws IOException{
-    try {
-        Parent rootShop = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
-        Stage viewFlightsStage = new Stage();
-        viewFlightsStage.setTitle("Flights Market");
-        viewFlightsStage.setScene(new Scene(rootShop, 1350, 750));
-        viewFlightsStage.show();
-    }catch(NullPointerException ignored)
-    {}
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
+        Stage addFlightStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        addFlightStage.setTitle("Flights Market");
+        addFlightStage.setScene(new Scene(root,1350,750));
+        addFlightStage.show();
     }
 
-    public void reviewSales (ActionEvent event) throws IOException{
-        getPage("ReviewScreenAdmin");
+    public void reviewSales(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ReviewScreenAdmin.fxml")));
+        Stage reviewSalesStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        reviewSalesStage.setTitle("Interface");
+        reviewSalesStage.setScene(new Scene(root,1350,750));
+        reviewSalesStage.show();
 
     }
-
-    public void getPage(String filename) throws IOException {
-        Node node;
-        node = (Node)FXMLLoader.load(getClass().getResource(filename + ".fxml"));
-        homeAdmin.getChildren().setAll(node);
-
-    }
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 }

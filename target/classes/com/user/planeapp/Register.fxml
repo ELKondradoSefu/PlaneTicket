@@ -10,26 +10,26 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.RegisterController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.RegisterController">
    <left>
       <AnchorPane prefHeight="484.0" prefWidth="391.0" styleClass="backgroundColor" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="77.0" layoutY="72.0" prefHeight="21.0" prefWidth="205.0" text="Enter your personal data and" textFill="DEEPSKYBLUE">
+            <Label layoutX="83.0" layoutY="72.0" prefHeight="23.0" prefWidth="241.0" text="Enter your personal data and" textAlignment="CENTER" textFill="DEEPSKYBLUE">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Cambria" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="93.0" layoutY="93.0" text="start flying with us!" textFill="DEEPSKYBLUE">
+            <Label layoutX="122.0" layoutY="95.0" prefHeight="23.0" prefWidth="162.0" text="start flying with us!" textAlignment="CENTER" textFill="DEEPSKYBLUE">
                <font>
-                  <Font size="15.0" />
+                  <Font name="Cambria" size="19.0" />
                </font>
             </Label>
-            <Label layoutX="114.0" layoutY="25.0" text="Hello, travaller!" textFill="DEEPSKYBLUE">
+            <Label layoutX="83.0" layoutY="30.0" prefHeight="42.0" prefWidth="270.0" text="Hello, travaller!" textFill="DEEPSKYBLUE">
                <font>
-                  <Font name="Serif Regular" size="24.0" />
+                  <Font name="Cambria Bold" size="33.0" />
                </font>
             </Label>
-            <ImageView fitHeight="253.0" fitWidth="500.0" layoutX="-1.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="459.0" fitWidth="809.0" layoutX="-1.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/plane.png" />
                </image>
@@ -38,49 +38,49 @@
       </AnchorPane>
    </left>
    <right>
-      <AnchorPane prefHeight="484.0" prefWidth="635.0" style="-fx-background-color: #ADD8E6;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="750.0" prefWidth="573.0" style="-fx-background-color: #ADD8E6;" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="lastnameTextfield" layoutX="170.0" layoutY="193.0" prefHeight="24.0" prefWidth="193.0" promptText="Lastname" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="lastnameTextfield" layoutX="280.0" layoutY="190.0" prefHeight="24.0" prefWidth="193.0" promptText="Lastname" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="78.0" layoutY="139.0" text="First name">
+            <Label layoutX="185.0" layoutY="139.0" text="First name">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="firstnameTextfield" layoutX="170.0" layoutY="135.0" prefHeight="24.0" prefWidth="193.0" promptText="Firstname" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #00BFFF;">
+            <TextField fx:id="firstnameTextfield" layoutX="280.0" layoutY="132.0" prefHeight="24.0" prefWidth="193.0" promptText="Firstname" style="-fx-border-width: 0px 0px 2px 0px; -fx-border-color: #00BFFF;">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </TextField>
-            <TextField fx:id="emailTextfield" layoutX="170.0" layoutY="253.0" prefHeight="24.0" prefWidth="193.0" promptText="Email" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
+            <TextField fx:id="emailTextfield" layoutX="280.0" layoutY="250.0" prefHeight="24.0" prefWidth="193.0" promptText="Email" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </TextField>
-            <Label layoutX="76.0" layoutY="197.0" text="Last name">
+            <Label layoutX="186.0" layoutY="197.0" text="Last name">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="100.0" layoutY="257.0" text="Email">
+            <Label layoutX="189.0" layoutY="257.0" text="Email">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <Label layoutX="78.0" layoutY="320.0" text="Password">
+            <Label layoutX="189.0" layoutY="320.0" text="Password">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <Button id="rich-blue" fx:id="registerButton" layoutX="118.0" layoutY="373.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="40.0" prefWidth="211.0" stylesheets="@cssfiles/button.css" text="Sign up" textFill="DEEPSKYBLUE">
+            <Button id="rich-blue" fx:id="registerButton" layoutX="258.0" layoutY="393.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="40.0" prefWidth="211.0" stylesheets="@cssfiles/button.css" text="Sign up" textFill="DEEPSKYBLUE">
                <font>
                   <Font name="Times New Roman" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="closeButton" layoutX="383.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="21.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="x">
+            <Button fx:id="closeButton" layoutX="589.0" layoutY="6.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="21.0" prefWidth="25.0" style="-fx-background-color: transparent;" text="x">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -90,21 +90,21 @@
                   <Font name="Times New Roman" size="18.0" />
                </font>
             </Label>
-            <PasswordField fx:id="setPasswordField" layoutX="170.0" layoutY="314.0" prefHeight="24.0" prefWidth="193.0" promptText="Password" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
+            <PasswordField fx:id="setPasswordField" layoutX="280.0" layoutY="313.0" prefHeight="24.0" prefWidth="193.0" promptText="Password" style="-fx-border-color: #00BFFF; -fx-border-width: 0px 0px 2px 0px;">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font></PasswordField>
-            <Label layoutX="118.0" layoutY="43.0" text="Create account">
+            <Label layoutX="270.0" layoutY="49.0" text="Create account">
                <font>
                   <Font name="Serif Bold" size="29.0" />
                </font>
             </Label>
-            <Label layoutX="108.0" layoutY="428.0" text="Already have an account?">
+            <Label layoutX="261.0" layoutY="460.0" text="Already have an account?">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="returnSignin" layoutX="264.0" layoutY="423.0" mnemonicParsing="false" onAction="#returnSigninOnAction" prefHeight="28.0" prefWidth="66.0" style="-fx-background-color: transparent;" styleClass="signupButton" text="Sign in" underline="true">
+            <Button fx:id="returnSignin" layoutX="417.0" layoutY="455.0" mnemonicParsing="false" onAction="#returnSigninOnAction" prefHeight="28.0" prefWidth="66.0" style="-fx-background-color: transparent;" styleClass="signupButton" text="Sign in" underline="true">
                <font>
                   <Font name="Times New Roman Bold" size="15.0" />
                </font>

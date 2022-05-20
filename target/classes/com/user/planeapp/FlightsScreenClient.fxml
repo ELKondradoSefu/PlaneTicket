@@ -69,13 +69,13 @@
                            <children>
                               <Label fx:id="flightNameLabel" prefHeight="60.0" prefWidth="182.0" text="Paris" textFill="WHITE">
                                  <font>
-                                    <Font name="Cambria" size="24.0" />
+                                    <Font name="Cambria Bold" size="24.0" />
                                  </font>
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
                               </Label>
-                              <Label fx:id="flightPriceLabel" prefHeight="62.0" prefWidth="183.0" text="\$10" textFill="WHITE">
+                              <Label fx:id="flightPriceLabel" prefHeight="42.0" prefWidth="152.0" text="\$10" textFill="WHITE">
                                  <font>
                                     <Font name="Cambria" size="30.0" />
                                  </font>
@@ -96,17 +96,51 @@
                               <Separator prefHeight="7.0" prefWidth="298.0" />
                            </children>
                         </HBox>
-                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="335.0">
+                        <HBox prefHeight="61.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="44.0" prefWidth="166.0" text="Date" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="flightDateLabel" prefHeight="62.0" prefWidth="139.0" text="1" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="63.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="176.0" text="Duration" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="flightDurationLabel" prefHeight="46.0" prefWidth="158.0" text="1" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="335.0">
                            <children>
                               <Label prefHeight="54.0" prefWidth="165.0" text="Tickets" textFill="WHITE">
                                  <font>
                                     <Font name="Cambria" size="24.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="comboBox" prefHeight="45.0" prefWidth="130.0" promptText="1" styleClass="comboBox" stylesheets="@cssfiles/styles.css" />
+                              <ComboBox fx:id="comboBox" prefHeight="45.0" prefWidth="130.0" promptText="0" styleClass="comboBox" stylesheets="@cssfiles/styles.css" />
                            </children>
                         </HBox>
-                        <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="270.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="BUY" textFill="#828282">
+                        <Button mnemonicParsing="false" onAction="#buyButton" prefHeight="50.0" prefWidth="270.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="BUY" textFill="#828282">
                            <VBox.margin>
                               <Insets bottom="20.0" top="30.0" />
                            </VBox.margin>
@@ -143,20 +177,32 @@
                               <Insets />
                            </opaqueInsets>
                         </Label>
-                        <Pane prefHeight="66.0" prefWidth="410.0" HBox.hgrow="ALWAYS" />
-                        <Label prefHeight="60.0" prefWidth="120.0" text="My Account" textFill="#878787">
-                           <font>
-                              <Font name="Cambria" size="18.0" />
-                           </font>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                        </Label>
+                        <Pane prefHeight="66.0" prefWidth="410.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="backButton" layoutX="313.0" layoutY="13.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="39.0" prefWidth="83.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
+                                 <font>
+                                    <Font name="Cambria" size="17.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="myCart" layoutX="419.0" layoutY="20.0" prefHeight="27.0" prefWidth="149.0" styleClass="search-box" stylesheets="@cssfiles/styles.css">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </TextField>
+                           </children></Pane>
                         <ImageView fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/shopcart.png" />
                            </image>
                         </ImageView>
+                        <Button fx:id="closeLogin" mnemonicParsing="false" onAction="#closeLoginOnAction" prefHeight="61.0" prefWidth="38.0" style="-fx-background-color: transparent;" text="x">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="5.0" />
+                           </HBox.margin>
+                        </Button>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -167,15 +213,7 @@
                                  <children>
                                     <VBox prefHeight="100.0" prefWidth="181.0">
                                        <children>
-                                          <Label prefHeight="60.0" prefWidth="182.0" text="Free delivery" textFill="#878787">
-                                             <font>
-                                                <Font name="Cambria Bold" size="18.0" />
-                                             </font>
-                                             <opaqueInsets>
-                                                <Insets />
-                                             </opaqueInsets>
-                                          </Label>
-                                          <Label prefHeight="60.0" prefWidth="182.0" text="over $20 order" textFill="#878787">
+                                          <Label prefHeight="138.0" prefWidth="182.0" text="Choose Your Flights" textFill="#878787">
                                              <font>
                                                 <Font name="Cambria Bold" size="18.0" />
                                              </font>
@@ -197,15 +235,7 @@
                            <children>
                               <VBox prefHeight="100.0" prefWidth="181.0">
                                  <children>
-                                    <Label prefHeight="60.0" prefWidth="182.0" text="Free delivery" textFill="#878787">
-                                       <font>
-                                          <Font name="Cambria Bold" size="18.0" />
-                                       </font>
-                                       <opaqueInsets>
-                                          <Insets />
-                                       </opaqueInsets>
-                                    </Label>
-                                    <Label prefHeight="60.0" prefWidth="182.0" text="over $20 order" textFill="#878787">
+                                    <Label prefHeight="100.0" prefWidth="182.0" text="Fast, Easy &amp; Safe" textFill="#878787">
                                        <font>
                                           <Font name="Cambria Bold" size="18.0" />
                                        </font>

@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,11 +20,11 @@ import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 
 public class RegisterController implements Initializable {
-
     @FXML
     private Button closeButton;
     @FXML
@@ -43,7 +44,6 @@ public class RegisterController implements Initializable {
     @FXML
     private Button returnSignin;
 
-    //close button
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();
@@ -51,57 +51,40 @@ public class RegisterController implements Initializable {
     }
 
     public void registerButtonOnAction(ActionEvent event) throws IOException{
-
-        try{
+        try
+        {
             User.addUserClient(firstnameTextfield.getText(),lastnameTextfield.getText(),emailTextfield.getText(),setPasswordField.getText());
             //Load the Home Page for client
-            homepageClient();
-
-
+            homepageClient(event);
         }
         catch(EmptyFieldException | UsernameNotAvailable e){
             //error if not all fields are completed
             registrationMessageLabel.setText(e.getMessage());
         }
-
     }
 
     //return to sign in form if you already have an account
     public void returnSigninOnAction(ActionEvent event) throws IOException{
-        signinForm();
-
+        signinForm(event);
     }
 
-    public void signinForm(){
-        try{
-            Parent root = FXMLLoader.load(getClass().getResource("Interface.fxml"));
-            Stage registerStage = new Stage();
-            registerStage.initStyle(StageStyle.UNDECORATED);
-            registerStage.setScene(new Scene(root, 818, 484));
-            registerStage.show();
-        }catch (Exception e){
-            e.printStackTrace();
-            e.getCause();
-        }
+    public void signinForm(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Interface.fxml")));
+        Stage signInStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        signInStage.setTitle("Interface");
+        signInStage.setScene(new Scene(root, 1350, 750));
+        signInStage.show();;
     }
 
-    //home page opener
-    public void homepageClient(){
-        try{
-            Parent home_page_parent = FXMLLoader.load(getClass().getResource("HomeScreenClient.fxml"));
-            Stage home_page_scene = new Stage();
-            home_page_scene.initStyle(StageStyle.UNDECORATED);
-            home_page_scene.setScene(new Scene(home_page_parent, 818, 484));
-            home_page_scene.show();
-
-        }catch(IOException e){
-            e.printStackTrace();
-            e.getCause();
-        }
+    public void homepageClient(ActionEvent event) throws IOException {
+        Parent homePageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomeScreenClient.fxml")));
+        Stage homePageStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        homePageStage.setTitle("Home Admin");
+        homePageStage.setScene(new Scene(homePageParent,1350,750));
+        homePageStage.show();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 }
