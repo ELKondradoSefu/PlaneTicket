@@ -49,14 +49,11 @@ public class HomeScreenClientController implements Initializable {
     }
 
     public void shopButtonOnAction(ActionEvent event) throws IOException{
-    try {
         Parent rootShop = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
-        Stage viewFlightsStage = new Stage();
+        Stage viewFlightsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         viewFlightsStage.setTitle("Flights Market");
         viewFlightsStage.setScene(new Scene(rootShop, 1350, 750));
         viewFlightsStage.show();
-    }catch(NullPointerException ignored)
-    {}
     }
 
     public void historyButtonOnAction(ActionEvent event) throws IOException{

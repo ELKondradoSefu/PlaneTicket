@@ -60,7 +60,7 @@ public class InterfaceController implements Initializable {
                 Parent home_page_parent = FXMLLoader.load(getClass().getResource("HomeScreenClient.fxml"));
                 Stage home_page_scene = new Stage();
                 home_page_scene.initStyle(StageStyle.UNDECORATED);
-                home_page_scene.setScene(new Scene(home_page_parent, 818, 484));
+                home_page_scene.setScene(new Scene(home_page_parent, 1350, 750));
                 home_page_scene.show();
                 email=username.getText();
                 //verify if the user is the admin
@@ -68,7 +68,7 @@ public class InterfaceController implements Initializable {
                 //switch to home screen admin
                 Parent home_admin_parent = FXMLLoader.load(getClass().getResource("HomeScreenAdmin.fxml"));
                 Stage home_admin_scene = new Stage();
-                home_admin_scene.setScene(new Scene(home_admin_parent, 818, 484));
+                home_admin_scene.setScene(new Scene(home_admin_parent, 1350, 750));
                 home_admin_scene.show();
 
             }else
