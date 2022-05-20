@@ -16,7 +16,7 @@ public class UserLogin extends Application {
              Parent root = FXMLLoader.load(getClass().getResource("Interface.fxml"));
              primaryStage.initStyle(StageStyle.UNDECORATED);
 
-             //primaryStage.setTitle("Application");
+             //primaryStage.setTitle("Plane Market");
              primaryStage.setScene(new Scene(root, 818, 484));
              primaryStage.show();
 
