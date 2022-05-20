@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.ReviewScreenClientController">
+<AnchorPane fx:id="reviewHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.ReviewScreenClientController">
    <children>
-      <Label layoutX="170.0" layoutY="144.0" prefHeight="114.0" prefWidth="523.0" text="REVIEW/CANCEL">
+      <Label layoutX="26.0" layoutY="40.0" prefHeight="114.0" prefWidth="523.0" text="REVIEW/CANCEL">
          <font>
             <Font size="68.0" />
          </font>
@@ -15,6 +15,11 @@
       <Button fx:id="closeButton" layoutX="730.0" layoutY="17.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="78.0" prefWidth="74.0" style="-fx-background-color: transparent;" text="x">
          <font>
             <Font size="38.0" />
+         </font>
+      </Button>
+      <Button id="admin" fx:id="homePageButton" layoutX="24.0" layoutY="447.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
          </font>
       </Button>
    </children>
