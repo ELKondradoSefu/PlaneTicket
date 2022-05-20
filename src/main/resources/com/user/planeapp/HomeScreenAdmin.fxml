@@ -34,7 +34,7 @@
             <Font name="Times New Roman" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="closeButton" layoutX="772.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x" textFill="WHITE">
+      <Button fx:id="closeButton" layoutX="779.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
