@@ -18,6 +18,7 @@ public class ShopScreenClientController implements Initializable {
 
     @FXML
     private Button closeButton;
+
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) closeButton.getScene().getWindow();
         stage.close();

@@ -6,12 +6,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class ReviewScreenClientController implements Initializable {
@@ -23,6 +26,13 @@ public class ReviewScreenClientController implements Initializable {
     @FXML
     private Button homePageButton;
 
+    public void backButtonOnAction(ActionEvent event) throws IOException {
+        Parent homePageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomeScreenClient.fxml")));
+        Stage homePageStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        homePageStage.setTitle("Home Admin");
+        homePageStage.setScene(new Scene(homePageParent,1350,750));
+        homePageStage.show();
+    }
 
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) closeButton.getScene().getWindow();
@@ -32,19 +42,13 @@ public class ReviewScreenClientController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
-
-    public void getPage(String filename) throws IOException {
-        Node node;
-        node = (Node) FXMLLoader.load(getClass().getResource(filename + ".fxml"));
-        reviewHome.getChildren().setAll(node);
-
     }
 
     public void homeScreenButtonOnAction(ActionEvent event) throws IOException {
-
-        getPage("Interface");
+        Parent homePageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Interface.fxml")));
+        Stage homePageStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        homePageStage.setTitle("Interface");
+        homePageStage.setScene(new Scene(homePageParent,1350,750));
+        homePageStage.show();
     }
 }

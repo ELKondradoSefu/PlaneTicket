@@ -1,6 +1,7 @@
 package com.user.planeapp;
 
 import com.user.planeapp.Interfaces.MyListener;
+import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -53,6 +54,9 @@ public class ViewFlightsController implements Initializable {
 
     @FXML
     private TextField comboBoxTextField;
+
+    @FXML
+    private Button closeLogin;
 
     @FXML
     private TextField myCart;
@@ -161,11 +165,17 @@ public class ViewFlightsController implements Initializable {
     }
 
     public void backButtonOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("HomeScreenClient.fxml"));
-        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Parent homePageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomeScreenClient.fxml")));
+        Stage homePageStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        homePageStage.setTitle("Home Admin");
+        homePageStage.setScene(new Scene(homePageParent,1350,750));
+        homePageStage.show();
+    }
+
+    public void closeLoginOnAction(ActionEvent event){
+        Stage stage = (Stage)closeLogin.getScene().getWindow();
+        stage.close();
+        Platform.exit();
     }
 
     public void buyButton(ActionEvent actionEvent)
@@ -179,15 +189,13 @@ public class ViewFlightsController implements Initializable {
 
     public void setChosenFlight(Flight flight)
     {
-        try {
-            flightNameLabel.setText(flight.getName());
-            flightPriceLabel.setText(UserLogin.CURRENCY + flight.getPrice());
-            flightDateLabel.setText(flight.getDate());
-            flightDurationLabel.setText(String.valueOf(flight.getFlightDuration()));
-            image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(flight.getImgSrc())));
-            flightImg.setImage(image);
-            chosenFlight.setStyle("-fx-background-color: #" + flight.getColor() + ";\n" + "-fx-background-radius: 30");
-        }catch (NullPointerException e){}
+        flightNameLabel.setText(flight.getName());
+        flightPriceLabel.setText(UserLogin.CURRENCY + flight.getPrice());
+        flightDateLabel.setText(flight.getDate());
+        flightDurationLabel.setText(String.valueOf(flight.getFlightDuration()));
+        image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(flight.getImgSrc())));
+        flightImg.setImage(image);
+        chosenFlight.setStyle("-fx-background-color: #" + flight.getColor() + ";\n" + "-fx-background-radius: 30");
     }
 
     @Override
@@ -201,7 +209,6 @@ public class ViewFlightsController implements Initializable {
                     setChosenFlight(flight);
                 }
             };
-
             comboBox.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
         }
         int column = 0;

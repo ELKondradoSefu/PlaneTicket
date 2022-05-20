@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.InterfaceController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.InterfaceController">
    <left>
       <AnchorPane prefHeight="484.0" prefWidth="820.0" styleClass="backgroundColor" BorderPane.alignment="CENTER">
          <children>
@@ -19,14 +19,14 @@
                   <Font name="Serif Bold Italic" size="24.0" />
                </font>
             </Label>
-            <ImageView fitHeight="477.0" fitWidth="818.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="805.0" fitWidth="1350.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/sky-cartoon-png-4-Transparent-Images-Free.png" />
                </image>
             </ImageView>
-            <Label layoutX="334.0" layoutY="460.0" prefHeight="20.0" prefWidth="150.0" text="BOOK A TICKET NOW!">
+            <Label layoutX="580.0" layoutY="705.0" prefHeight="41.0" prefWidth="190.0" text="BOOK A TICKET NOW!" textAlignment="CENTER">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Cambria Bold" size="18.0" />
                </font>
             </Label>
          </children></AnchorPane>

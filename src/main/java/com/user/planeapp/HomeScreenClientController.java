@@ -44,28 +44,27 @@ public class HomeScreenClientController implements Initializable {
     }
 
     public void homeScreenButtonOnAction(ActionEvent event) throws IOException {
-
-        getPage("Interface");
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Interface.fxml")));
+        Stage homeStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        homeStage.setTitle("Interface");
+        homeStage.setScene(new Scene(root, 1350, 750));
+        homeStage.show();
     }
 
     public void shopButtonOnAction(ActionEvent event) throws IOException{
-        Parent rootShop = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
         Stage viewFlightsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         viewFlightsStage.setTitle("Flights Market");
-        viewFlightsStage.setScene(new Scene(rootShop, 1350, 750));
+        viewFlightsStage.setScene(new Scene(root, 1350, 750));
         viewFlightsStage.show();
     }
 
     public void historyButtonOnAction(ActionEvent event) throws IOException{
-        getPage("ReviewScreenClient");
-
-    }
-
-    public void getPage(String filename) throws IOException {
-        Node node;
-        node = (Node)FXMLLoader.load(getClass().getResource(filename + ".fxml"));
-        home.getChildren().setAll(node);
-
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ReviewScreenClient.fxml")));
+        Stage historyStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        historyStage.setTitle("Review Flights");
+        historyStage.setScene(new Scene(root, 1350, 750));
+        historyStage.show();
     }
 
     @Override

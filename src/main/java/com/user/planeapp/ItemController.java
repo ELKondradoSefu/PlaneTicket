@@ -9,6 +9,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
+import java.util.Objects;
+
 public class ItemController {
     @FXML
     private Label nameLabel;
@@ -43,7 +45,7 @@ public class ItemController {
             duration.setText(String.valueOf(flight.getFlightDuration()));
             date.setText(flight.getDate());
             Image image;
-            image = new Image(getClass().getResourceAsStream(flight.getImgSrc()));
+            image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(flight.getImgSrc())));
             img.setImage(image);
     }
 }
