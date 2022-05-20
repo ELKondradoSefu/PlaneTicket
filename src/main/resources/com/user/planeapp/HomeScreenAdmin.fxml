@@ -7,31 +7,31 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="homeAdmin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.HomeScreenAdminController">
+<AnchorPane fx:id="homeAdmin" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1350.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.HomeScreenAdminController">
    <children>
-      <ImageView fitHeight="750.0" fitWidth="1350.0">
+      <ImageView fitHeight="535.0" fitWidth="1047.0" layoutX="283.0" layoutY="122.0">
          <image>
-            <Image url="@images/admin_back2.jpg" />
+            <Image url="@images/airplane.png" />
          </image>
       </ImageView>
-      <Label layoutX="337.0" layoutY="23.0" text="ADMIN PAGE">
+      <Label layoutX="27.0" layoutY="31.0" text="ADMIN PAGE" textFill="DODGERBLUE">
          <font>
-            <Font name="Times New Roman Bold Italic" size="22.0" />
+            <Font name="Cambria Bold" size="41.0" />
          </font>
       </Label>
-      <Button id="admin" fx:id="homePageButton" layoutX="21.0" layoutY="440.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
+      <Button id="admin" fx:id="homePageButton" layoutX="14.0" layoutY="703.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
          <font>
-            <Font name="Times New Roman" size="18.0" />
+            <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Button id="admin" fx:id="adminAdd" layoutX="21.0" layoutY="133.0" mnemonicParsing="false" onAction="#addFlight" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 40;" stylesheets="@cssfiles/HomeAdmin.css" text="Add Flights">
+      <Button id="admin" fx:id="adminAdd" layoutX="14.0" layoutY="299.0" mnemonicParsing="false" onAction="#addFlight" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 40;" stylesheets="@cssfiles/HomeAdmin.css" text="Add Flights">
          <font>
-            <Font name="Times New Roman" size="18.0" />
+            <Font name="Cambria Bold" size="22.0" />
          </font>
       </Button>
-      <Button id="admin" fx:id="adminReview" layoutX="21.0" layoutY="242.0" mnemonicParsing="false" onAction="#reviewSales" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 40;" stylesheets="@cssfiles/HomeAdmin.css" text="Review Sales">
+      <Button id="admin" fx:id="adminReview" layoutX="14.0" layoutY="458.0" mnemonicParsing="false" onAction="#reviewSales" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 40;" stylesheets="@cssfiles/HomeAdmin.css" text="Review Sales">
          <font>
-            <Font name="Times New Roman" size="18.0" />
+            <Font name="Cambria Bold" size="22.0" />
          </font>
       </Button>
       <Button fx:id="closeButton" layoutX="1311.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
@@ -39,5 +39,6 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
+      <Button layoutX="67.0" layoutY="576.0" mnemonicParsing="false" onAction="#viewFlights" text="Button" />
    </children>
 </AnchorPane>

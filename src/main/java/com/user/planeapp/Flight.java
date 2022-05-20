@@ -7,6 +7,15 @@ public class Flight {
     private String color;
     private int flightDuration;
     private String date;
+    private double ticketSum;
+
+    public double getTicketSum() {
+        return ticketSum;
+    }
+
+    public void setTicketSum(double ticketSum) {
+        this.ticketSum = ticketSum;
+    }
 
     public double getFlightDuration() {
         return flightDuration;

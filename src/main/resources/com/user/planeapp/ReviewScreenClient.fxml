@@ -17,12 +17,12 @@
             <Font size="29.0" />
          </font>
       </Button>
-      <Button id="admin" fx:id="homePageButton" layoutX="24.0" layoutY="447.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
+      <Button id="admin" fx:id="homePageButton" layoutX="14.0" layoutY="703.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
          <font>
-            <Font name="Times New Roman" size="18.0" />
+            <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="backButton" layoutX="1126.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="39.0" prefWidth="83.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
+      <Button fx:id="backButton" layoutX="1165.0" layoutY="1.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="39.0" prefWidth="83.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
          <font>
             <Font name="Cambria" size="17.0" />
          </font>

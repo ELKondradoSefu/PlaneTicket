@@ -21,6 +21,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -41,6 +43,8 @@ public class ReviewScreenAdminController implements Initializable {
 
     String[]flights = {"Tokyo", " Istanbul","London", "New York", "Ottawa", "Kiev", "Beijing", "Vienna","Buenos Aires"};
     String currenFlight;
+    List<Flight> flightsList = new ArrayList<>();
+    ViewFlightsController viewFlightsController = new ViewFlightsController();
 
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) closeButton.getScene().getWindow();
@@ -68,14 +72,15 @@ public class ReviewScreenAdminController implements Initializable {
             }
         });
 
+        flightsList = viewFlightsController.getData();
+
         XYChart.Series<String,Number>series = new XYChart.Series<>();
         series.setName("Flight Comparison");
-        series.getData().add(new XYChart.Data<>("Tokyo",12));
-        series.getData().add(new XYChart.Data<>("Istanbul",12));
-        series.getData().add(new XYChart.Data<>("London",30));
-        series.getData().add(new XYChart.Data<>("New York",25));
-        series.getData().add(new XYChart.Data<>("Ottawa",12));
-        series.getData().add(new XYChart.Data<>("Kiev",20));
+
+        for(int i=0;i<flightsList.size();i++)
+        {
+            series.getData().add(new XYChart.Data<>(flightsList.get(i).getName(),flightsList.get(i).getTicketSum()));
+        }
 
         Chart.getData().add(series);
     }

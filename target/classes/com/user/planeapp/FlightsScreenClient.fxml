@@ -18,6 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.ViewFlightsController">
    <children>
@@ -44,7 +45,7 @@
                         <Insets left="30.0" right="30.0" />
                      </VBox.margin>
                      <children>
-                        <TextField prefHeight="40.0" prefWidth="223.0" promptText="Type here to search" styleClass="transparent" stylesheets="@cssfiles/styles.css">
+                        <TextField fx:id="searchBoxFlight" prefHeight="40.0" prefWidth="223.0" promptText="Type here to search" styleClass="transparent" stylesheets="@cssfiles/styles.css">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
@@ -52,14 +53,21 @@
                               <Font name="Cambria" size="18.0" />
                            </font>
                         </TextField>
-                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" styleClass="search-button" stylesheets="@cssfiles/styles.css" text="Search" textFill="WHITE" />
+                        <Button mnemonicParsing="false" onAction="#searchForFlight" prefHeight="40.0" prefWidth="100.0" styleClass="search-button" stylesheets="@cssfiles/styles.css" text="Search" textFill="WHITE" />
                      </children>
                      <styleClass>
                         <String fx:value="search-box" />
                         <String fx:value="shadow" />
                      </styleClass>
                   </HBox>
-                  <HBox prefHeight="25.0" prefWidth="435.0" />
+                  <HBox alignment="CENTER" prefHeight="31.0" prefWidth="435.0">
+                     <children>
+                        <Label fx:id="errorOnSearch" textAlignment="CENTER" textFill="RED">
+                           <font>
+                              <Font name="Cambria Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
                   <VBox fx:id="chosenFlight" alignment="CENTER" prefHeight="535.0" prefWidth="100.0" styleClass="chosen-flight-card" stylesheets="@cssfiles/styles.css">
                      <VBox.margin>
                         <Insets left="50.0" right="50.0" />
@@ -106,14 +114,14 @@
                                     <Insets left="20.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="flightDateLabel" prefHeight="62.0" prefWidth="139.0" text="1" textFill="WHITE">
+                              <Label fx:id="flightDateLabel" prefHeight="44.0" prefWidth="141.0" text="1" textFill="WHITE">
                                  <font>
                                     <Font name="Cambria" size="20.0" />
                                  </font>
                               </Label>
                            </children>
                         </HBox>
-                        <HBox prefHeight="63.0" prefWidth="335.0">
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="335.0">
                            <children>
                               <Label prefHeight="46.0" prefWidth="176.0" text="Duration" textFill="WHITE">
                                  <font>
@@ -123,11 +131,16 @@
                                     <Insets left="20.0" />
                                  </HBox.margin>
                               </Label>
-                              <Label fx:id="flightDurationLabel" prefHeight="46.0" prefWidth="158.0" text="1" textFill="WHITE">
+                              <Label fx:id="flightDurationLabel" prefHeight="46.0" prefWidth="95.0" text="1" textFill="WHITE">
                                  <font>
                                     <Font name="Cambria" size="20.0" />
                                  </font>
                               </Label>
+                              <Text fx:id="mins" strokeType="OUTSIDE" strokeWidth="0.0" text="mins" wrappingWidth="62.93676710128784">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
                            </children>
                         </HBox>
                         <HBox alignment="CENTER" prefHeight="70.0" prefWidth="335.0">
