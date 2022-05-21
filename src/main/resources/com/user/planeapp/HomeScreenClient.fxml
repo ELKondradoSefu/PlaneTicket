@@ -45,7 +45,7 @@
             <Font name="Times New Roman Bold Italic" size="28.0" />
          </font>
       </Label>
-      <Button id="bevel-grey" fx:id="historyButton" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" onAction="#historyButtonOnAction" prefHeight="62.0" prefWidth="258.0" stylesheets="@cssfiles/HomeClient.css" text="Review/Cancel Flights" textFill="#ffe5b4">
+      <Button id="bevel-grey" fx:id="historyButton" layoutX="14.0" layoutY="453.0" mnemonicParsing="false" onAction="#historyButtonOnAction" prefHeight="62.0" prefWidth="258.0" stylesheets="@cssfiles/HomeClient.css" text="Flights Review" textFill="#ffe5b4">
          <font>
             <Font name="Cambria Bold" size="21.0" />
          </font>
