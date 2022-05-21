@@ -27,7 +27,7 @@ public class HomeScreenAdminController implements Initializable {
     @FXML
     private AnchorPane homeAdmin;
     @FXML
-    private Button adminAdd;
+    private Button adminViewFlights;
     @FXML
     private Button adminReview;
 
@@ -45,8 +45,8 @@ public class HomeScreenAdminController implements Initializable {
         homeStage.show();
     }
 
-    public void addFlight(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Interface.fxml")));
+    public void viewFlights(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
         Stage addFlightStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         addFlightStage.setTitle("Add new flight");
         addFlightStage.setScene(new Scene(root,1350,750));
@@ -59,14 +59,6 @@ public class HomeScreenAdminController implements Initializable {
         reviewSalesStage.setTitle("Interface");
         reviewSalesStage.setScene(new Scene(root,1350,750));
         reviewSalesStage.show();
-    }
-
-    public void viewFlights(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
-        Stage viewFlightsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        viewFlightsStage.setTitle("Flights Market");
-        viewFlightsStage.setScene(new Scene(root, 1350, 750));
-        viewFlightsStage.show();
     }
 
     @Override

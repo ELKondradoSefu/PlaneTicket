@@ -28,43 +28,30 @@ import java.util.ResourceBundle;
 public class ViewFlightsController implements Initializable {
     @FXML
     private VBox chosenFlight;
-
     @FXML
     private ImageView flightImg;
-
     @FXML
     private Label flightNameLabel;
-
     @FXML
     private Label flightPriceLabel;
-
     @FXML
     private GridPane grid;
-
     @FXML
     private Label flightDateLabel;
-
     @FXML
     private Label flightDurationLabel;
-
     @FXML
     private ScrollPane scroll;
-
     @FXML
-    private ComboBox comboBox = new ComboBox();
-
+    private ComboBox<Integer> comboBox = new ComboBox<>();
     @FXML
     private TextField comboBoxTextField;
-
     @FXML
     private Button closeLogin;
-
     @FXML
     private TextField myCart;
-
     @FXML
     private TextField searchBoxFlight;
-
     @FXML
     private Label errorOnSearch;
 

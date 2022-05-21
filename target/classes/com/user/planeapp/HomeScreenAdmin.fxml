@@ -24,12 +24,12 @@
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Button id="admin" fx:id="adminAdd" layoutX="14.0" layoutY="299.0" mnemonicParsing="false" onAction="#addFlight" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 40;" stylesheets="@cssfiles/HomeAdmin.css" text="Add Flights">
+      <Button id="admin" fx:id="adminViewFlights" layoutX="14.0" layoutY="299.0" mnemonicParsing="false" onAction="#viewFlights" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 40;" stylesheets="@cssfiles/HomeAdmin.css" text="View Flights">
          <font>
             <Font name="Cambria Bold" size="22.0" />
          </font>
       </Button>
-      <Button id="admin" fx:id="adminReview" layoutX="14.0" layoutY="458.0" mnemonicParsing="false" onAction="#reviewSales" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 40;" stylesheets="@cssfiles/HomeAdmin.css" text="Review Sales">
+      <Button id="admin" fx:id="adminReview" layoutX="14.0" layoutY="458.0" mnemonicParsing="false" onAction="#reviewSales" prefHeight="62.0" prefWidth="210.0" style="-fx-background-radius: 40;" stylesheets="@cssfiles/HomeAdmin.css" text="Review Users">
          <font>
             <Font name="Cambria Bold" size="22.0" />
          </font>
@@ -39,6 +39,5 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="67.0" layoutY="576.0" mnemonicParsing="false" onAction="#viewFlights" text="Button" />
    </children>
 </AnchorPane>
