@@ -32,7 +32,7 @@
             <Font name="Cambria" size="17.0" />
          </font>
       </Button>
-      <AreaChart fx:id="areaChart" layoutX="59.0" layoutY="99.0" prefHeight="565.0" prefWidth="1223.0" style="-fx-background-color: #87CEFA;" styleClass="shadow" stylesheets="@cssfiles/styles.css" title="Raport betweeen duration and price">
+      <AreaChart fx:id="areaChart" layoutX="59.0" layoutY="99.0" prefHeight="565.0" prefWidth="1223.0" style="-fx-background-color: #87CEFA;" styleClass="shadow" stylesheets="@cssfiles/styles.css">
         <xAxis>
           <CategoryAxis label="Flights" side="BOTTOM">
                <tickLabelFont>
