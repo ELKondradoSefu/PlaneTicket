@@ -60,7 +60,7 @@ public class HomeScreenClientController implements Initializable {
     }
 
     public void historyButtonOnAction(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ReviewScreenAdmin.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("ReviewScreenClient.fxml")));
         Stage historyStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         historyStage.setTitle("Review Flights");
         historyStage.setScene(new Scene(root, 1350, 750));

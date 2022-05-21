@@ -17,7 +17,7 @@ public class Flight {
         this.ticketSum = ticketSum;
     }
 
-    public double getFlightDuration() {
+    public int getFlightDuration() {
         return flightDuration;
     }
 

@@ -120,13 +120,13 @@ public class ViewFlightsController implements Initializable {
         flight = addFlight("Buenos Aiers",72.5,"buenosaires.jpg","9370DB",280,"16/12/2022");
         flights.add(flight);
 
-        flight = addFlight("Paris",95,"paris.jpg","FFE4C4",133,"10/11/2023");
+        flight = addFlight("Paris",95,"paris.jpg","9ACD32",133,"10/11/2023");
         flights.add(flight);
 
         flight = addFlight("Seoul",269.99,"seoul.jpg","ff1e90",250,"01/05/2022");
         flights.add(flight);
 
-        flight = addFlight("Budapest",45,"budapesta.jpg","2F4F4F",22,"29/11/2022");
+        flight = addFlight("Budapest",15,"budapesta.jpg","2F4F4F",22,"29/11/2022");
         flights.add(flight);
 
         flight = addFlight("Lima",199.99,"Lima.jpg","A52A2A",225,"10/11/2023");
