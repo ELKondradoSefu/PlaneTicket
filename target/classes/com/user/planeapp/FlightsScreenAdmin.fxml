@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.user.planeapp.ViewFlightsAdminController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" stylesheets="@cssfiles/styles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="435.0" styleClass="right-bar" stylesheets="@cssfiles/styles.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="50.0" prefWidth="146.0" text="Flights" textFill="#878787">
+                           <font>
+                              <Font name="Cambria Bold" size="40.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" text="Market" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="375.0" stylesheets="@cssfiles/styles.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="searchBoxFlight" prefHeight="40.0" prefWidth="223.0" promptText="Type here to search" styleClass="transparent" stylesheets="@cssfiles/styles.css">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#searchForFlight" prefHeight="40.0" prefWidth="100.0" styleClass="search-button" stylesheets="@cssfiles/styles.css" text="Search" textFill="WHITE" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="31.0" prefWidth="435.0">
+                     <children>
+                        <Label fx:id="errorOnSearch" textAlignment="CENTER" textFill="RED">
+                           <font>
+                              <Font name="Cambria Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children></HBox>
+                  <VBox fx:id="chosenFlight" alignment="CENTER" prefHeight="535.0" prefWidth="100.0" styleClass="chosen-flight-card" stylesheets="@cssfiles/styles.css">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox prefHeight="60.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="flightNameLabel" prefHeight="60.0" prefWidth="182.0" text="Paris" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Label>
+                              <Label fx:id="flightPriceLabel" prefHeight="42.0" prefWidth="152.0" text="\$10" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="20.0" top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Pane prefHeight="33.0" prefWidth="335.0" VBox.vgrow="ALWAYS" />
+                        <ImageView fx:id="flightImg" fitHeight="170.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/paris.jpg" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" prefHeight="62.0" prefWidth="340.0">
+                           <children>
+                              <Separator prefHeight="7.0" prefWidth="298.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="61.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="44.0" prefWidth="166.0" text="Date" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="flightDateLabel" prefHeight="44.0" prefWidth="141.0" text="1" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="63.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="46.0" prefWidth="176.0" text="Duration" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label fx:id="flightDurationLabel" prefHeight="46.0" prefWidth="78.0" text="1" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="mins" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="mins" wrappingWidth="79.73675489425659">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="54.0" prefWidth="165.0" text="Tickets" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="comboBox" prefHeight="45.0" prefWidth="130.0" promptText="0" styleClass="comboBox" stylesheets="@cssfiles/styles.css" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#buyButton" prefHeight="50.0" prefWidth="270.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="BUY" textFill="#828282">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label prefHeight="60.0" prefWidth="112.0" text="Language" textFill="#878787">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label prefHeight="60.0" prefWidth="127.0" text="English" textFill="#878787">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Pane prefHeight="66.0" prefWidth="410.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="backButton" layoutX="313.0" layoutY="13.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="39.0" prefWidth="83.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
+                                 <font>
+                                    <Font name="Cambria" size="17.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="myCart" layoutX="419.0" layoutY="20.0" prefHeight="27.0" prefWidth="149.0" styleClass="search-box" stylesheets="@cssfiles/styles.css">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </TextField>
+                           </children></Pane>
+                        <ImageView fitHeight="50.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/shopcart.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="closeLogin" mnemonicParsing="false" onAction="#closeLoginOnAction" prefHeight="61.0" prefWidth="38.0" style="-fx-background-color: transparent;" text="x">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="105.0" prefWidth="370.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="105.0" prefWidth="370.0" styleClass="smek" stylesheets="@cssfiles/styles.css">
+                                 <children>
+                                    <VBox prefHeight="100.0" prefWidth="181.0">
+                                       <children>
+                                          <Label prefHeight="138.0" prefWidth="182.0" text="Choose Your Flights" textFill="#878787">
+                                             <font>
+                                                <Font name="Cambria Bold" size="18.0" />
+                                             </font>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <HBox alignment="CENTER" prefHeight="105.0" prefWidth="370.0" styleClass="smek2" stylesheets="@cssfiles/styles.css">
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="181.0">
+                                 <children>
+                                    <Label prefHeight="100.0" prefWidth="182.0" text="Fast, Easy &amp; Safe" textFill="#878787">
+                                       <font>
+                                          <Font name="Cambria Bold" size="18.0" />
+                                       </font>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fx:id="scroll" prefHeight="570.0" prefWidth="785.0" styleClass="transparent" stylesheets="@cssfiles/styles.css">
+                           <content>
+                              <GridPane fx:id="grid" prefHeight="14.0" prefWidth="31.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </GridPane>
+                           </content>
+                           <HBox.margin>
+                              <Insets right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
