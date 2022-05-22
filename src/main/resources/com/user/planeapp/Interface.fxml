@@ -56,12 +56,12 @@
                         <Font name="Times New Roman" size="30.0" />
                      </font>
                   </Button>
-                  <Label fx:id="wrongLogIn" layoutX="160.0" layoutY="151.0" prefHeight="21.0" prefWidth="202.0" textFill="#e16f62">
+                  <Label fx:id="wrongLogIn" layoutX="155.0" layoutY="160.0" prefHeight="29.0" prefWidth="210.0" textFill="#e16f62">
                      <font>
-                        <Font name="Serif Regular" size="15.0" />
+                        <Font name="Serif Regular" size="17.0" />
                      </font>
                   </Label>
-                  <Label layoutX="169.0" layoutY="89.0" prefHeight="55.0" prefWidth="175.0" text="Sign In" textAlignment="CENTER">
+                  <Label layoutX="173.0" layoutY="73.0" prefHeight="55.0" prefWidth="175.0" text="Sign In" textAlignment="CENTER">
                      <font>
                         <Font name="Times New Roman Bold" size="49.0" />
                      </font>

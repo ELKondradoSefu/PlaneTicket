@@ -28,19 +28,19 @@ public class RegisterController implements Initializable {
     @FXML
     private Button closeButton;
     @FXML
-    private Label registrationMessageLabel;
+    public Label registrationMessageLabel;
     @FXML
-    private PasswordField setPasswordField;
+    public PasswordField setPasswordField;
     @FXML
     private PasswordField confirmPasswordField;
     @FXML
     private Label confirmPasswordLabel;
     @FXML
-    private TextField firstnameTextfield;
+    public TextField firstnameTextfield;
     @FXML
-    private TextField lastnameTextfield;
+    public TextField lastnameTextfield;
     @FXML
-    private TextField emailTextfield;
+    public TextField emailTextfield;
     @FXML
     private Button returnSignin;
 
