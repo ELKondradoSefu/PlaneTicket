@@ -2,7 +2,6 @@ package com.user.planeapp;
 
 import com.user.planeapp.Interfaces.MyListener;
 import javafx.application.Platform;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,11 +10,13 @@ import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.*;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -25,7 +26,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class ViewFlightsController implements Initializable {
+public class ViewFlightsAdminController implements Initializable {
     @FXML
     private VBox chosenFlight;
     @FXML
@@ -104,7 +105,7 @@ public class ViewFlightsController implements Initializable {
         flight = addFlight("Vienna",15.99,"viena.jpg","F08080",55,"10/10/2022");
         flights.add(flight);
 
-        flight = addFlight("Buenos Aires",72.5,"buenosaires.jpg","9370DB",280,"16/12/2022");
+        flight = addFlight("Buenos Aiers",72.5,"buenosaires.jpg","9370DB",280,"16/12/2022");
         flights.add(flight);
 
         flight = addFlight("Paris",95,"paris.jpg","9ACD32",133,"10/11/2023");
@@ -126,7 +127,7 @@ public class ViewFlightsController implements Initializable {
     }
 
     public void backButtonOnAction(ActionEvent event) throws IOException {
-        Parent homePageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomeScreenClient.fxml")));
+        Parent homePageParent = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomeScreenAdmin.fxml")));
         Stage homePageStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         homePageStage.setTitle("Home Admin");
         homePageStage.setScene(new Scene(homePageParent,1350,750));

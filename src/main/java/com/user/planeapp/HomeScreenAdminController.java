@@ -46,7 +46,7 @@ public class HomeScreenAdminController implements Initializable {
     }
 
     public void viewFlights(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenClient.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("FlightsScreenAdmin.fxml")));
         Stage addFlightStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         addFlightStage.setTitle("Add new flight");
         addFlightStage.setScene(new Scene(root,1350,750));

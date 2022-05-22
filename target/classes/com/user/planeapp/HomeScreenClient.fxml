@@ -50,9 +50,9 @@
             <Font name="Cambria Bold" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="closeButton" layoutX="1311.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
+      <Button fx:id="closeButton" layoutX="1279.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="62.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="x">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="29.0" />
          </font>
       </Button>
       <Text fill="#e8927b" layoutX="74.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MENU" textAlignment="CENTER">
