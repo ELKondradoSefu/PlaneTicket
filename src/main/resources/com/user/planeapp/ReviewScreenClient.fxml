@@ -17,9 +17,9 @@
             <Image url="@images/sky-cartoon-png-4-Transparent-Images-Free.png" />
          </image>
       </ImageView>
-      <Button fx:id="closeButton" layoutX="1282.0" layoutY="-7.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="69.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="x">
+      <Button fx:id="closeButton" layoutX="1272.0" layoutY="-7.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="76.0" prefWidth="76.0" style="-fx-background-color: transparent;" text="x">
          <font>
-            <Font size="29.0" />
+            <Font name="System Bold" size="29.0" />
          </font>
       </Button>
       <Button id="admin" fx:id="homePageButton" layoutX="14.0" layoutY="703.0" mnemonicParsing="false" onAction="#homeScreenButtonOnAction" prefHeight="31.0" prefWidth="123.0" stylesheets="@cssfiles/HomeAdmin.css" text="Log Out">
@@ -27,7 +27,7 @@
             <Font name="Cambria Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="backButton" layoutX="1170.0" layoutY="8.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="39.0" prefWidth="83.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
+      <Button fx:id="backButton" layoutX="1212.0" layoutY="678.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="59.0" prefWidth="123.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
          <font>
             <Font name="Cambria" size="17.0" />
          </font>

@@ -20,9 +20,9 @@
             <Image url="@images/bird.gif" />
          </image>
       </ImageView>
-      <Button fx:id="closeButton" layoutX="1300.0" layoutY="2.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
+      <Button fx:id="closeButton" layoutX="1285.0" layoutY="2.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="71.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="x">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="29.0" />
          </font>
       </Button>
       <Label fx:id="mySales" alignment="CENTER" layoutY="14.0" prefHeight="40.0" prefWidth="370.0" text="Users information">
@@ -30,7 +30,7 @@
             <Font name="Cambria Bold" size="32.0" />
          </font>
       </Label>
-      <Button fx:id="backButton" layoutX="1185.0" layoutY="4.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="39.0" prefWidth="83.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
+      <Button fx:id="backButton" layoutX="1229.0" layoutY="707.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="52.0" prefWidth="112.0" styleClass="add-button" stylesheets="@cssfiles/styles.css" text="Back">
          <font>
             <Font name="Cambria" size="17.0" />
          </font>

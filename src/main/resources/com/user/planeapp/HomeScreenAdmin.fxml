@@ -34,9 +34,9 @@
             <Font name="Cambria Bold" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="closeButton" layoutX="1311.0" layoutY="1.0" mnemonicParsing="false" onAction="#closeButtonOnAction" style="-fx-background-color: transparent;" text="x">
+      <Button fx:id="closeButton" layoutX="1279.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="74.0" prefWidth="70.0" style="-fx-background-color: transparent;" text="x" textFill="WHITE">
          <font>
-            <Font name="System Bold" size="20.0" />
+            <Font name="System Bold" size="26.0" />
          </font>
       </Button>
    </children>

@@ -77,7 +77,7 @@ public class ViewFlightsController implements Initializable {
         List<Flight> flights = new ArrayList<>();
         Flight flight;
 
-        flight = addFlight("Istambul",45.4,"istambul.jpg","6A7324",128,"11/05/2022");
+        flight = addFlight("Istanbul",45.4,"istambul.jpg","6A7324",128,"11/05/2022");
         flights.add(flight);
 
         flight = addFlight("Rome",53,"rome.jpg","8A2BE2",110,"5/05/2022");
@@ -148,7 +148,7 @@ public class ViewFlightsController implements Initializable {
                 setChosenFlight(flights.get(i));
                 return;
             }
-        errorOnSearch.setText("We dont have that flight");
+        errorOnSearch.setText("We do not  have that flight");
     }
 
     public void buyButton(ActionEvent actionEvent)
