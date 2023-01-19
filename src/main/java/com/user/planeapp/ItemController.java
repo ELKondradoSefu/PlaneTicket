@@ -37,16 +37,16 @@ public class ItemController {
 
     public void setData(Flight flight,MyListener myListener)
     {
-            this.flight = flight;
-            this.myListener=myListener;
+        this.flight = flight;
+        this.myListener=myListener;
 
-            nameLabel.setText(flight.getName());
-            priceLabel.setText(UserLogin.CURRENCY + flight.getPrice());
-            duration.setText(String.valueOf(flight.getFlightDuration()));
-            date.setText(flight.getDate());
-            Image image;
-            image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(flight.getImgSrc())));
-            img.setImage(image);
+        nameLabel.setText(flight.getName());
+        priceLabel.setText(UserLogin.CURRENCY + flight.getPrice());
+        duration.setText(String.valueOf(flight.getFlightDuration()));
+        date.setText(flight.getDate());
+        Image image;
+        image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(flight.getImgSrc())));
+        img.setImage(image);
     }
 }
 

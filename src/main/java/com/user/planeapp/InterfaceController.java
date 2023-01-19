@@ -87,11 +87,11 @@ public class InterfaceController implements Initializable {
 
     //display register stage
     public void createAccountForm(ActionEvent event) throws IOException {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Register.fxml")));
-            Stage registerStage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            registerStage.setTitle("Register");
-            registerStage.setScene(new Scene(root, 1350, 750));
-            registerStage.show();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Register.fxml")));
+        Stage registerStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        registerStage.setTitle("Register");
+        registerStage.setScene(new Scene(root, 1350, 750));
+        registerStage.show();
     }
 
     @Override

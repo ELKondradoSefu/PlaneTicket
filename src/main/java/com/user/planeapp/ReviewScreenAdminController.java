@@ -1,8 +1,6 @@
 package com.user.planeapp;
 
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,25 +11,17 @@ import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import java.io.*;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.*;
 
 public class ReviewScreenAdminController implements Initializable {
-
     @FXML
     private Button closeButton;
     @FXML
@@ -73,7 +63,6 @@ public class ReviewScreenAdminController implements Initializable {
         while(scan.hasNext())
         {
             ArrayList<String> firstName = new ArrayList<>();
-            ArrayList<String> password = new ArrayList<>();
             ArrayList<String> email = new ArrayList<>();
             ArrayList<String> lastName = new ArrayList<>();
 
@@ -90,11 +79,11 @@ public class ReviewScreenAdminController implements Initializable {
                     userCount++;
                     if(userCount==1)
                         firstName.add(aux);
-                    else if(userCount==2)
-                        password.add(aux);
+                    else if(userCount==2) {
+                    }
                     else if(userCount==3)
                         email.add(aux);
-                    else if(userCount==4)
+                    else
                     {
                         lastName.add(aux);
                         userCount=0;
@@ -103,10 +92,9 @@ public class ReviewScreenAdminController implements Initializable {
             }
             for(int i=0;i<firstName.size();i++) {
                 firstName.set(i,firstName.get(i).substring(1,firstName.get(i).length()-1));
-                password.set(i,password.get(i).substring(1,password.get(i).length()-1));
                 email.set(i,email.get(i).substring(1,email.get(i).length()-1));
                 lastName.set(i,lastName.get(i).substring(1,lastName.get(i).length()-1));
-                textAreaUsers.appendText(i+1 + ".First Name:" + firstName.get(i) + "\nPassword:" + password.get(i)+ "\nEmail:" + email.get(i) + "\nLast Name:" + lastName.get(i) + "\n\n");
+                textAreaUsers.appendText(i+1 + ".First Name:" + firstName.get(i) + "\nEmail:" + email.get(i) + "\nLast Name:" + lastName.get(i) + "\n\n");
             }
         }
     }

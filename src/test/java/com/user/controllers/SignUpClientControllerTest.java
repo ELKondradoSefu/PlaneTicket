@@ -28,59 +28,51 @@ public class SignUpClientControllerTest extends ApplicationTest {
     public static final String TEST_PASSWORD = "testPassword";
     public static final ActionEvent event = new ActionEvent();
 
-
     private RegisterController controller;
-
 
     @Before
     public void setUp() throws Exception {
-
         controller = new RegisterController();
         controller.firstnameTextfield = new TextField();
         controller.lastnameTextfield = new TextField();
         controller.emailTextfield = new TextField();
         controller.setPasswordField = new PasswordField();
         controller.registrationMessageLabel = new Label();
-
         controller.firstnameTextfield.setText(TEST_FIRSTNAME);
         controller.lastnameTextfield.setText(TEST_LASTNAME);
         controller.emailTextfield.setText(TEST_EMAIL);
         controller.setPasswordField.setText(TEST_PASSWORD);
-
-
     }
 
 
     @AfterClass
     public static void afterClass() throws Exception {
-
-            JSONObject obj = new JSONObject();
-            JSONArray arrayClient = new JSONArray();
-            JSONParser jp = new JSONParser();
-            Object p;
-            try {
-                FileReader readFile = new FileReader("src/main/resources/usersClient.json");
-                BufferedReader read = new BufferedReader(readFile);
-                p = jp.parse(read);
-                if (p instanceof JSONArray) {
-                    arrayClient = (JSONArray) p;
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (ParseException e) {
-                e.printStackTrace();
+        JSONObject obj = new JSONObject();
+        JSONArray arrayClient = new JSONArray();
+        JSONParser jp = new JSONParser();
+        Object p;
+        try {
+            FileReader readFile = new FileReader("src/main/resources/usersClient.json");
+            BufferedReader read = new BufferedReader(readFile);
+            p = jp.parse(read);
+            if (p instanceof JSONArray) {
+                arrayClient = (JSONArray) p;
             }
-            arrayClient.clear();
-            try {
-                File file = new File("src/main/resources/usersClient.json");
-                FileWriter fisier = new FileWriter(file.getAbsoluteFile());
-                fisier.write(arrayClient.toJSONString());
-                fisier.flush();
-                fisier.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        arrayClient.clear();
+        try {
+            File file = new File("src/main/resources/usersClient.json");
+            FileWriter fisier = new FileWriter(file.getAbsoluteFile());
+            fisier.write(arrayClient.toJSONString());
+            fisier.flush();
+            fisier.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

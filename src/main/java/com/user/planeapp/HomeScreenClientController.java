@@ -21,7 +21,6 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class HomeScreenClientController implements Initializable {
-
     @FXML
     private Label userLabel;
     @FXML
@@ -34,8 +33,6 @@ public class HomeScreenClientController implements Initializable {
     private Button shopButton;
     @FXML
     private Button historyButton;
-
-
 
     public void closeButtonOnAction(ActionEvent event){
         Stage stage = (Stage) closeButton.getScene().getWindow();
@@ -69,8 +66,6 @@ public class HomeScreenClientController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         userLabel.setText(User.name);
-
     }
 }
